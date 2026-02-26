@@ -1,8 +1,7 @@
 """
-Nike, Inc. (NKE) — Equity Research | Full DCF & Comparable Company Valuation
+NKE Full DCF & Comparable Company Valuation
 ==============================================================================
-Goldman Sachs Analyst-Grade Model
-Author: [Your Name]
+Author: Krish Pathak
 Date: 2025
 
 Model Structure:
