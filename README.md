@@ -6,7 +6,7 @@ This project is a Python-based valuation tool for Nike, Inc. It pulls historical
 
 * **WACC Build-up:** Uses the CAPM method. Sourced the Risk-Free Rate from the 10Y Treasury and the ERP from Damodaran’s 2025 data.
 * **Projections:** Modeled three scenarios (Bear, Base, Bull). Revenue growth and margins are driven by Nike’s shift toward Direct-to-Consumer (DTC) channels.
-* **Unlevered FCF:** Calculated as $NOPAT + D\&A - CapEx - \Delta NWC$.
+* **Unlevered FCF:** Calculated as: **NOPAT + D&A - CapEx - Change in NWC**
 * **Terminal Value:** Used the Gordon Growth Method with a 3.0% exit growth rate for the base case.
 
 **Model Features**
