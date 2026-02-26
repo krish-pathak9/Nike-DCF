@@ -1,6 +1,6 @@
 **Overview**
 
-This project is a Python-based valuation tool for Nike, Inc. It pulls historical data from an Excel database to build a 5-year DCF (Discounted Cash Flow) and a Comparable Company Analysis. The goal was to automate the repetitive parts of financial modeling—like formatting and sensitivity tables—while keeping the valuation logic transparent.
+This project is a Python-based valuation tool for Nike, Inc. It pulls historical data from an Excel database to build a 5 year DCF and a Comparable Company Analysis. The goal was to automate the repetitive parts of financial modeling formatting and sensitivity tables, while keeping the valuation logic transparent.
 
 **Financial Logic**
 
