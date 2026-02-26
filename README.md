@@ -1,4 +1,29 @@
-Nike DCF Model
-This model runs a full discounted cash flow valuation on Nike using their historical financial data. To use it, make sure you have Python installed, then run pip install pandas numpy openpyxl to install the required libraries. Place nike_dcf_final.py and Nike_Financials.xlsx in the same folder and run python nike_dcf_final.py. It will generate a file called Nike_GS_DCF_Model.xlsx in that same folder.
-The Excel file has 10 sheets. It starts with a cover page showing the implied share price, upside or downside versus the current market price, and a summary of the three scenarios. From there it walks through the full model — the WACC calculation, five years of historical financials pulled directly from your Excel file, Bear/Base/Bull case projections, a sensitivity table, comparable company analysis, and a football field chart showing all the valuation methods side by side. Every assumption has its source documented on the final sheet.
-The only things you need to manually update before each use are the five market inputs at the top of the script, the current share price, beta, the 10-year Treasury yield, the equity risk premium from Damodaran's website, and Nike's cost of debt from their 10-K. Everything else is calculated automatically from the financial data in your Excel file.
+**Overview**
+
+This project is a Python-based valuation tool for Nike, Inc. It pulls historical data from an Excel database to build a 5-year DCF (Discounted Cash Flow) and a Comparable Company Analysis. The goal was to automate the repetitive parts of financial modeling—like formatting and sensitivity tables—while keeping the valuation logic transparent.
+
+**Financial Logic**
+
+* **WACC Build-up:** Uses the CAPM method. Sourced the Risk-Free Rate from the 10Y Treasury and the ERP from Damodaran’s 2025 data.
+* **Projections:** Modeled three scenarios (Bear, Base, Bull). Revenue growth and margins are driven by Nike’s shift toward Direct-to-Consumer (DTC) channels.
+* **Unlevered FCF:** Calculated as $NOPAT + D\&A - CapEx - \Delta NWC$.
+* **Terminal Value:** Used the Gordon Growth Method with a 3.0% exit growth rate for the base case.
+
+**Model Features**
+
+* **Automated Excel Export:** The script doesn't just calculate numbers; it builds a fully formatted `.xlsx` file from scratch.
+* **Formatting Conventions:** Follows standard finance color-coding (Blue for inputs, Black for formulas).
+* **Sensitivity Matrix:** Includes a WACC vs. Terminal Growth heatmap to show how share price changes under different macro conditions.
+* **Football Field Chart:** Aggregates the DCF, Peer Multiples, and 52-week trading range into a single summary chart.
+
+**How to Run**
+
+1. Make sure `Nike_Financials.xlsx` is in the folder.
+2. Run `nike_dcf.py`.
+3. The output file `Nike_DCF_Model_vF.xlsx` will be generated with all sheets and charts.
+
+**Key Data Sources**
+
+* **Historical Financials:** Nike 10-K and 10-Q filings (FY2020-2024).
+* **Beta/Market Data:** Bloomberg & Yahoo Finance.
+* **Peer Multiples:** FactSet consensus for Adidas, Lululemon, and Skechers.
