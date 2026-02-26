@@ -306,7 +306,7 @@ football_field = {
 # 8. EXCEL FORMATTING HELPERS
 # =============================================================================
 
-OUTPUT = "Nike_GS_DCF_Model.xlsx"
+OUTPUT = "Nike_DCF_Model_vF.xlsx"
 wb     = Workbook()
 wb.remove(wb.active)
 
